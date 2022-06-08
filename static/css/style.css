@@ -1730,7 +1730,7 @@ ul#grid_home li a.img_container .short_info:hover div {
   transform: translateY(-40px);
 }
 ul#grid_home li:nth-child(1) .img_container:hover .short_info .btn_1 {
-  background-color: #FFC107;
+  background-color: #e7df01;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -1749,10 +1749,10 @@ ul#grid_home li:nth-child(2) .img_container:hover .short_info .btn_1 {
   transition: all 0.5s ease;
 }
 ul#grid_home li:nth-child(2) .img_container:hover .short_info .btn_1:hover {
-  background-color: #FFC107;
+  background-color: #e7df01;
 }
 ul#grid_home li:nth-child(3) .img_container:hover .short_info .btn_1 {
-  background-color: #FFC107;
+  background-color: #e7df01;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
@@ -3745,8 +3745,8 @@ section#reviews {
 }
 
 /*-------- 2.5 Login/register/admission--------*/
-#login_bg, #register_bg, #admission_bg {
-  background: url(http://via.placeholder.com/1600x1067/ccc/fff/bg_login.jpg) center center no-repeat fixed;
+.login_bg, .register_bg, .admission_bg {
+  background: url(/static/img/DYN-2.jpg) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -3755,15 +3755,15 @@ section#reviews {
   width: 100%;
 }
 
-#register_bg {
-  background: url(http://via.placeholder.com/1600x1067/ccc/fff/bg_register.jpg) center center no-repeat fixed;
+.register_bg {
+  background: url(/static/img/IMG_5881.JPG) center center no-repeat fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
 }
 
-#admission_bg {
+.admission_bg {
   background: url(http://via.placeholder.com/1600x1067/ccc/fff/bg_admission.jpg) center center no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -3774,9 +3774,9 @@ section#reviews {
 #login figure, #register figure {
   text-align: center;
   margin-bottom: 30px;
-  background: #480048;
-  background: -webkit-linear-gradient(left, #480048, #C04848);
-  background: linear-gradient(to right, #480048, #C04848);
+  background: #1017e4;
+  background: -webkit-linear-gradient(left, #1017e4, #e7df01);
+  background: linear-gradient(to right, #1017e4, #e7df01);
   margin: -45px -60px 30px -60px;
   padding: 20px 60px 25px 60px;
 }

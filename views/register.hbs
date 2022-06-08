@@ -1,0 +1,63 @@
+<div class="register_bg">
+  <nav id="menu" class="fake_menu"></nav>
+
+  <div id="preloader">
+    <div data-loader="circle-side"></div>
+  </div>
+  <!-- End Preload -->
+
+  <div id="login">
+    <aside>
+      <figure>
+        <a href="/"><img src="/static/img/0716FFF-11.png" height="42" alt=""></a><span class="fs-6 mx-3"
+          style="color: white;">Free the
+          Freedom</span>
+      </figure>
+      <form autocomplete="off" action="/register" method="POST">
+        <div class="form-group">
+
+          <span class="input">
+            <input class="input_field" type="text" name="fullName" required>
+            <label class="input_label">
+              <span class="input__label-content">Your Full Name</span>
+            </label>
+          </span>
+
+          <span class="input">
+            <input class="input_field" type="text" name="userName" required>
+            <label class="input_label">
+              <span class="input__label-content">Your User Name</span>
+            </label>
+          </span>
+
+          <span class="input">
+            <input class="input_field" type="email" name="email" required>
+            <label class="input_label">
+              <span class="input__label-content">Your Email</span>
+            </label>
+          </span>
+
+          <span class="input">
+            <input class="input_field" type="password" id="password1" name="password" required>
+            <label class="input_label">
+              <span class="input__label-content">Your password</span>
+            </label>
+          </span>
+
+          <span class="input">
+            <input class="input_field" type="password" id="password2" name="passwordCheck" required>
+            <label class="input_label">
+              <span class="input__label-content">Confirm password</span>
+            </label>
+          </span>
+
+          <div id="pass-info" class="clearfix"></div>
+        </div>
+        <button type="submit" class="btn_1 rounded full-width add_top_60">Register to FreeTheFreedom</button>
+        <div class="text-center add_top_10">Already have an acccount? <strong><a href="/login">Log In</a></strong>
+        </div>
+      </form>
+      <div class="copy">© 2022 FreeTheFreedom</div>
+    </aside>
+  </div>
+</div>

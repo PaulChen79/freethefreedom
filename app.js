@@ -7,6 +7,7 @@ const { handlebarsHelpers } = require('./helpers/handlebars-helpers')
 const session = require('express-session')
 const flash = (require('connect-flash'))
 const methodOverride = require('method-override')
+const { getUser } = require('./helpers/auth-helpers')
 const path = require('path')
 const routes = require('./routes/index')
 const app = express()
@@ -24,7 +25,7 @@ app.use((req, res, next) => {
   res.locals.success_messages = req.flash('success_messages')
   res.locals.error_messages = req.flash('error_messages')
   res.locals.warning_msg = req.flash('warning_msg')
-  res.locals.user = req.user
+  res.locals.user = getUser(req)
   next()
 })
 
