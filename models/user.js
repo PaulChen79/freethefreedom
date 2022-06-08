@@ -23,11 +23,11 @@ const userSchema = new Schema({
     type: String,
     required: true
   },
-  EmergencyContactName: {
+  emergencyContactName: {
     type: String,
     required: true
   },
-  EmergencyContactPhone: {
+  emergencyContactPhone: {
     type: String,
     required: true
   },

@@ -1,45 +1,82 @@
 <div class="login_bg">
   <nav id="menu" class="fake_menu"></nav>
-
   <div id="preloader">
     <div data-loader="circle-side"></div>
   </div>
   <!-- End Preload -->
-
   <div id="login">
     <aside>
       <figure>
-        <a href="/"><img src="/static/img/0716FFF-11.png" height="42" alt=""><span class="fs-6 mx-3"
-            style="color: white;">Free the
-            Freedom</span></a>
+        <a href="/" class="text-decoration-none">
+          <img src="/static/img/0716FFF-11.png" height="42" alt="" />
+          <span class="fs-6 mx-3" style="color: white;">
+            Free the Freedom
+          </span>
+        </a>
       </figure>
-      <form action="/login" method="POST">
+      {{>messages}}
+      <form action="/login" method="POST" class="overflow-auto">
         <div class="access_social">
-          <a href="#0" class="social_bt facebook">Login with Facebook</a>
-          <a href="#0" class="social_bt google">Login with Google</a>
+          <a href="#0" class="social_bt facebook">
+            Login with Facebook
+          </a>
+          <a href="#0" class="social_bt google">
+            Login with Google
+          </a>
         </div>
-        <div class="divider"><span>Or</span></div>
+        <div class="divider">
+          <span>
+            Or
+          </span>
+        </div>
         <div class="form-group">
           <span class="input">
-            <input class="input_field" type="email" autocomplete="off" name="email">
+            <input
+              class="input_field"
+              type="email"
+              autocomplete="off"
+              name="email"
+            />
             <label class="input_label">
-              <span class="input__label-content">Your email</span>
+              <span class="input__label-content">
+                Your email
+              </span>
             </label>
           </span>
-
           <span class="input">
-            <input class="input_field" type="password" autocomplete="off" name="password">
+            <input
+              class="input_field"
+              type="password"
+              autocomplete="off"
+              name="password"
+            />
             <label class="input_label">
-              <span class="input__label-content">Your password</span>
+              <span class="input__label-content">
+                Your password
+              </span>
             </label>
           </span>
-          <small><a href="#0">Forgot password?</a></small>
+          <small>
+            <a href="#0">
+              Forgot password?
+            </a>
+          </small>
         </div>
-        <button type="submit" class="btn_1 rounded full-width add_top_60">Login to FreeTheFreedom</button>
-        <div class="text-center add_top_10">New to FreeTheFreedom? <strong><a href="/register">Register!</a></strong>
+        <button type="submit" class="btn_1 rounded full-width add_top_60">
+          Login to FreeTheFreedom
+        </button>
+        <div class="text-center add_top_10">
+          New to FreeTheFreedom?
+          <strong>
+            <a href="/register">
+              Register!
+            </a>
+          </strong>
         </div>
       </form>
-      <div class="copy">© 2022 FreeTheFreedom</div>
+      <div class="copy">
+        © 2022 FreeTheFreedom
+      </div>
     </aside>
   </div>
 </div>
