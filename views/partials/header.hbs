@@ -1,0 +1,64 @@
+<header class="header menu_2">
+  <div id="preloader">
+    <div data-loader="circle-side"></div>
+  </div><!-- /Preload -->
+  <div id="logo">
+    <a href="index.html"><img src="/static/img/0716FFF-11.png" height="42" alt=""></a><span class="fs-6 mx-3">Free the
+      Freedom</span>
+  </div>
+  <ul id="top_menu" style="position: relative; top: 12px;">
+    {{#if user}}
+    <li>Hi! {{user.userName}}</li>
+    <li><a href="/users/{{user.id}}">個人資訊</a></li>
+    <li><a href="/schedules">已報名的課程</a></li>
+    <li><a href="#0">我的訊息</a></li>
+    {{#if user.isAdmin}}
+    <li><a href="/admin/courses">管理員後台</a></li>
+    {{/if}}
+    {{else}}
+    <li><a href="/login">登入</a></li>
+    {{/if}}
+    <li><a href="#0" class="search-overlay-menu-btn">Search</a></li>
+  </ul>
+  <!-- /top_menu -->
+  <a href="#menu" class="btn_mobile">
+    <div class="hamburger hamburger--spin" id="hamburger">
+      <div class="hamburger-box">
+        <div class="hamburger-inner"></div>
+      </div>
+    </div>
+  </a>
+  <nav id="menu" class="main-menu">
+    <ul>
+      <li><span><a href="/">Home</a></span>
+      </li>
+      <li><span><a href="#0">課程</a></span>
+        <ul>
+          <li><a href="/courses">所有課程</a></li>
+          <li><a href="/schedules">開課資訊</a></li>
+        </ul>
+      </li>
+      <li><span><a href="#0">關於我們</a></span>
+        <ul>
+          <li><a href="/about">關於自由自由</a></li>
+          <li><a href="/insructors">關於教練</a></li>
+          <li><a href="/guide">如何預約 | 課程須知</a></li>
+        </ul>
+      </li>
+      <li><span><a href="#0">聯絡我們</a></span>
+        <ul>
+          <li><a href="/contact">聯絡自由自由</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!-- Search Menu -->
+  <div class="search-overlay-menu">
+    <span class="search-overlay-close"><span class="closebt"><i class="ti-close"></i></span></span>
+    <form role="search" id="searchform" method="get">
+      <input value="" name="q" type="search" placeholder="Search..." />
+      <button type="submit"><i class="icon_search"></i>
+      </button>
+    </form>
+  </div><!-- End Search Menu -->
+</header>
