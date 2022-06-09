@@ -1,5 +1,44 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+
+const qualifactionSchema = new Schema({
+  age: {
+    type: String,
+    required: true
+  },
+  physical: {
+    type: String,
+    required: true
+  },
+  others: {
+    type: String
+  }
+})
+
+const examSchema = new Schema({
+  STA: {
+    type: String
+  },
+  DYNB: {
+    type: String
+  },
+  CWTB: {
+    type: String
+  },
+  DNF: {
+    type: String
+  },
+  CNF: {
+    type: String
+  },
+  theory: {
+    type: String
+  },
+  othersExam: {
+    type: String
+  }
+})
+
 const courseSchema = new Schema({
   titleZhTW: {
     type: String,
@@ -13,19 +52,7 @@ const courseSchema = new Schema({
     type: String,
     required: true
   },
-  qualification: {
-    age: {
-      type: String,
-      required: true
-    },
-    physical: {
-      type: String,
-      required: true
-    },
-    others: {
-      type: String
-    }
-  },
+  qualification: qualifactionSchema,
   content: {
     type: String,
     required: true
@@ -38,29 +65,7 @@ const courseSchema = new Schema({
     type: String,
     required: true
   },
-  exam: {
-    STA: {
-      type: String
-    },
-    DYNB: {
-      type: String
-    },
-    CWTB: {
-      type: String
-    },
-    DNF: {
-      type: String
-    },
-    CNF: {
-      type: String
-    },
-    theory: {
-      type: String
-    },
-    othersExam: {
-      type: String
-    }
-  },
+  exam: examSchema,
   price: {
     type: Number,
     required: true

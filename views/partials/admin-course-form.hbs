@@ -1,0 +1,160 @@
+<div class="row">
+  <div class="col-md add_top_30">
+    <div class="row">
+      <div class="fs-3 mb-3">Basic Infos</div>
+    </div>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="row">
+          <div class="form-group">
+            <label>Zh Title</label>
+            <input type="text" class="form-control" placeholder="Enter Zh Title" name="titleZhTW"
+              value="{{course.titleZhTW}}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>En Title</label>
+            <input type="text" class="form-control" placeholder="Enter En Title" name="titleEn"
+              value="{{course.titleEn}}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>Title Quote</label>
+            <textarea class="form-control" placeholder="Enter Title Quote"
+              name="titleQuote">{{course.titleQuote}}</textarea>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="form-group">
+            <label>Qualification - Age</label>
+            <input type="number" class="form-control" placeholder="Enter Age" name="age"
+              value="{{course.qualification.age}}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>Qualification - Physical</label>
+            <input type="text" class="form-control" placeholder="Enter Physical" name="physical"
+              value="{{course.qualification.physical}}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>Qualification - Others</label>
+            <textarea class="form-control" placeholder="Enter Others"
+              name="others">{{course.qualification.others}}</textarea>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="row">
+          <div class="form-group">
+            <label>Content</label>
+            <textarea class="form-control" placeholder="Enter Content" name="content">{{course.content}}</textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>Content Time</label>
+            <textarea class="form-control" placeholder="Enter Content Time"
+              name="contentTime">{{course.contentTime}}</textarea>
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>Photo Link</label>
+            <input type="text" class="form-control" placeholder="Enter image link" name="image"
+              value="{{course.image}}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /row-->
+    <div class="row">
+      <div class="fs-3 my-3">Examination</div>
+    </div>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="form-group">
+            <label>STA</label>
+            <input type="text" class="form-control" placeholder="Enter Examination" name="STA"
+              value="{{course.exam.STA}}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>DYNB</label>
+            <input type="text" class="form-control" placeholder="Enter Examination" name="DYNB"
+              value="{{course.exam.DYNB}}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>DNF</label>
+            <input type="text" class="form-control" placeholder="Enter Examination" name="DNF"
+              value="{{course.exam.DNF}}">
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row">
+          <div class="form-group">
+            <label>CWTB</label>
+            <input type="text" class="form-control" placeholder="Enter Examination" name="CWTB"
+              value="{{course.exam.CWTB}}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>CNF</label>
+            <input type="text" class="form-control" placeholder="Enter Examination" name="CNF"
+              value="{{course.exam.CNF}}">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label>Theory</label>
+            <input type="text" class="form-control" placeholder="Enter Examination" name="theory"
+              value="{{course.exam.theory}}">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="form-group">
+          <label>Other Exam</label>
+          <textarea class="form-control" placeholder="Enter Others Exam"
+            name="othersExam">{{course.exam.othersExam}}</textarea>
+        </div>
+      </div>
+    </div>
+    {{!-- <textarea style="height:100px;" class="form-control" placeholder="Personal info"></textarea> --}}
+    <!-- /row-->
+  </div>
+</div>
+<!-- /box_general-->
+<div class="row">
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Price</label>
+      <input type="number" class="form-control" placeholder="Enter Price" name="price" value="{{course.price}}">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div class="form-group">
+      <label>Price Quote</label>
+      <textarea class="form-control" placeholder="Enter Price Quote" name="priceQuote">{{course.priceQuote}}</textarea>
+    </div>
+  </div>
+</div>
+<!-- /row-->
+<div class="d-flex">
+  <p><button type="submit" class="btn_1 medium">Save</button></p>
+  <p><a href="javascript:history.back()" class="btn_1 gray mx-3">Back</a></p>
+</div>

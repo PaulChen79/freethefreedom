@@ -4,6 +4,7 @@
     <div class="container-fluid">
       <div class="box_general">
         <div class="header_box">
+          {{>messages}}
           <h2 class="d-inline-block">All Courses</h2>
           <div class="filter">
             <a class="btn btn-primary" href="/admin/courses/create">Add New Course</a>
@@ -14,29 +15,35 @@
             {{#each courses}}
             <li>
               <figure><img src="{{this.image}}" alt=""></figure>
-              <h4>{{this.titleZhTW}} - {{this.titleEn}}</h4>
-              <h6>Course price - {{this.price}}</h6>
-              <p>{{this.priceQuote}}</p>
-              <h6>Qualification</h6>
-              <ul class="course_list">
-                <li><strong>Age</strong> {{this.qualification.age}}</li>
-                <li><strong>Physical</strong> {{this.qualification.physical}}</li>
-                <li><strong>Others</strong> {{this.qualification.others}}</li>
-              </ul>
-              <h6>Course examination</h6>
-              <ul class="course_list">
-                <li><strong>STA</strong> {{this.exam.STA}}</li>
-                <li><strong>DYNB</strong> {{this.exam.DYNB}}</li>
-                <li><strong>DNF</strong> {{this.exam.DNF}}</li>
-                <li><strong>CWTB</strong> {{this.exam.CWTB}}</li>
-                <li><strong>CNF</strong> {{this.exam.CNF}}</li>
-                <li><strong>Theory</strong> {{this.exam.theory}}</li>
-                <li><strong>Others</strong> {{this.exam.others}}</li>
-              </ul>
+              <div class="row">
+                <div class="col-4">
+                  <h4>{{this.titleZhTW}} - {{this.titleEn}}</h4>
+                  <h6>Course price - {{this.price}}</h6>
+                  <p>{{this.priceQuote}}</p>
+                  <h6>Qualification</h6>
+                  <ul class="course_list">
+                    <li><strong>Age</strong> {{this.qualification.age}}</li>
+                    <li><strong>Physical</strong> {{this.qualification.physical}}</li>
+                    <li><strong>Others</strong> {{this.qualification.others}}</li>
+                  </ul>
+                </div>
+                <div class="col-8">
+                  <h6>Course examination</h6>
+                  <ul class="course_list">
+                    <li><strong>STA</strong> {{this.exam.STA}}</li>
+                    <li><strong>DYNB</strong> {{this.exam.DYNB}}</li>
+                    <li><strong>DNF</strong> {{this.exam.DNF}}</li>
+                    <li><strong>CWTB</strong> {{this.exam.CWTB}}</li>
+                    <li><strong>CNF</strong> {{this.exam.CNF}}</li>
+                    <li><strong>Theory</strong> {{this.exam.theory}}</li>
+                    <li><strong>Others</strong> {{this.exam.others}}</li>
+                  </ul>
+                </div>
+              </div>
               <ul class="buttons">
-                <li><a href="/admin/courses/{{this.id}}/edit" class="btn_1 gray approve">Edit</a></li>
+                <li><a href="/admin/courses/{{this._id}}/edit" class="btn_1 gray approve">Edit</a></li>
                 <li>
-                  <form action="/admin/courses/{{this.id}}?_method=DELETE" method="POST">
+                  <form action="/admin/courses/{{this._id}}?_method=DELETE" method="POST">
                     <button type="submit" class="btn_1 gray delete">Delete</button>
                   </form>
                 </li>
@@ -49,14 +56,6 @@
     </div>
     <!-- /container-fluid-->
   </div>
-  <!-- /container-wrapper-->
-  <footer class="sticky-footer">
-    <div class="container">
-      <div class="text-center">
-        <small>Copyright © 2022 FreeTheFreedom</small>
-      </div>
-    </div>
-  </footer>
   <!-- Scroll to Top Button-->
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fa fa-angle-up"></i>

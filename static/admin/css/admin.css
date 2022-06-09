@@ -546,6 +546,9 @@ a.btn_1.gray,
 .btn_1.gray {
   background: #e9ecef;
   color: #868e96;
+  padding: 12px 45px;
+  font-size: 16px;
+  font-size: 1rem;
 }
 a.btn_1.gray.approve:hover,
 .btn_1.gray.approve:hover {
