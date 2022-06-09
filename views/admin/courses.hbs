@@ -45,7 +45,8 @@
                 <li><a href="/admin/courses/{{this._id}}/edit" class="btn_1 gray approve">Edit</a></li>
                 <li>
                   <form action="/admin/courses/{{this._id}}?_method=DELETE" method="POST">
-                    <button type="submit" class="btn_1 gray delete">Delete</button>
+                    <button type="submit" class="btn_1 gray delete"
+                      onclick="return confirm(`確定要刪除 {{ this.titleEn }} 嗎？`)">Delete</button>
                   </form>
                 </li>
               </ul>

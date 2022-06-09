@@ -142,6 +142,16 @@ const adminController = {
     } catch (error) {
       next(error)
     }
+  },
+  deleteCourse: async (req, res, next) => {
+    try {
+      const courseId = req.params.id
+      await Course.findByIdAndRemove(courseId)
+      req.flash('success_msg', '成功刪除課程')
+      res.redirect('/admin/courses')
+    } catch (error) {
+      next(error)
+    }
   }
 }
 
