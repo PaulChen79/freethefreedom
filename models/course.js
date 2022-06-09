@@ -14,14 +14,27 @@ const courseSchema = new Schema({
     required: true
   },
   qualification: {
-    type: Number,
-    required: true
+    age: {
+      type: String,
+      required: true
+    },
+    physical: {
+      type: String,
+      required: true
+    },
+    others: {
+      type: String
+    }
   },
   content: {
     type: String,
     required: true
   },
   contentTime: {
+    type: String,
+    required: true
+  },
+  image: {
     type: String,
     required: true
   },
@@ -44,7 +57,7 @@ const courseSchema = new Schema({
     theory: {
       type: String
     },
-    others: {
+    othersExam: {
       type: String
     }
   },

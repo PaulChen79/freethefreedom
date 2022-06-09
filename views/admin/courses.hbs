@@ -1,0 +1,84 @@
+<div class="fixed-nav sticky-footer" id="page-top">
+  {{>admin-nav}}
+  <div class="content-wrapper" style="margin-top: 60px;">
+    <div class="container-fluid">
+      <div class="box_general">
+        <div class="header_box">
+          <h2 class="d-inline-block">All Courses</h2>
+          <div class="filter">
+            <a class="btn btn-primary" href="/admin/courses/create">Add New Course</a>
+          </div>
+        </div>
+        <div class="list_general">
+          <ul>
+            {{#each courses}}
+            <li>
+              <figure><img src="{{this.image}}" alt=""></figure>
+              <h4>{{this.titleZhTW}} - {{this.titleEn}}</h4>
+              <h6>Course price - {{this.price}}</h6>
+              <p>{{this.priceQuote}}</p>
+              <h6>Qualification</h6>
+              <ul class="course_list">
+                <li><strong>Age</strong> {{this.qualification.age}}</li>
+                <li><strong>Physical</strong> {{this.qualification.physical}}</li>
+                <li><strong>Others</strong> {{this.qualification.others}}</li>
+              </ul>
+              <h6>Course examination</h6>
+              <ul class="course_list">
+                <li><strong>STA</strong> {{this.exam.STA}}</li>
+                <li><strong>DYNB</strong> {{this.exam.DYNB}}</li>
+                <li><strong>DNF</strong> {{this.exam.DNF}}</li>
+                <li><strong>CWTB</strong> {{this.exam.CWTB}}</li>
+                <li><strong>CNF</strong> {{this.exam.CNF}}</li>
+                <li><strong>Theory</strong> {{this.exam.theory}}</li>
+                <li><strong>Others</strong> {{this.exam.others}}</li>
+              </ul>
+              <ul class="buttons">
+                <li><a href="/admin/courses/{{this.id}}/edit" class="btn_1 gray approve">Edit</a></li>
+                <li>
+                  <form action="/admin/courses/{{this.id}}?_method=DELETE" method="POST">
+                    <button type="submit" class="btn_1 gray delete">Delete</button>
+                  </form>
+                </li>
+              </ul>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /container-fluid-->
+  </div>
+  <!-- /container-wrapper-->
+  <footer class="sticky-footer">
+    <div class="container">
+      <div class="text-center">
+        <small>Copyright © 2022 FreeTheFreedom</small>
+      </div>
+    </div>
+  </footer>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+  </a>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-div">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
