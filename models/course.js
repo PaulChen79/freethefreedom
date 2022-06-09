@@ -52,6 +52,10 @@ const courseSchema = new Schema({
     type: String,
     required: true
   },
+  system: {
+    type: String,
+    required: true
+  },
   qualification: qualifactionSchema,
   content: {
     type: String,
@@ -62,8 +66,7 @@ const courseSchema = new Schema({
     required: true
   },
   image: {
-    type: String,
-    required: true
+    type: String
   },
   exam: examSchema,
   price: {

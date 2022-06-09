@@ -4,21 +4,22 @@
     <div class="container-fluid">
       <div class="box_general">
         <div class="header_box">
-          {{>messages}}
           <h2 class="d-inline-block">All Courses</h2>
           <div class="filter">
             <a class="btn btn-primary" href="/admin/courses/create">Add New Course</a>
           </div>
         </div>
+        {{>messages}}
         <div class="list_general">
           <ul>
             {{#each courses}}
             <li>
               <figure><img src="{{this.image}}" alt=""></figure>
               <div class="row">
-                <div class="col-4">
+                <div class="col-5">
                   <h4>{{this.titleZhTW}} - {{this.titleEn}}</h4>
-                  <h6>Course price - {{this.price}}</h6>
+                  <h6><strong>System: </strong>{{this.system}}</h6>
+                  <h6>Course price - ${{this.price}}</h6>
                   <p>{{this.priceQuote}}</p>
                   <h6>Qualification</h6>
                   <ul class="course_list">
@@ -27,7 +28,7 @@
                     <li><strong>Others</strong> {{this.qualification.others}}</li>
                   </ul>
                 </div>
-                <div class="col-8">
+                <div class="col-7">
                   <h6>Course examination</h6>
                   <ul class="course_list">
                     <li><strong>STA</strong> {{this.exam.STA}}</li>
@@ -36,7 +37,7 @@
                     <li><strong>CWTB</strong> {{this.exam.CWTB}}</li>
                     <li><strong>CNF</strong> {{this.exam.CNF}}</li>
                     <li><strong>Theory</strong> {{this.exam.theory}}</li>
-                    <li><strong>Others</strong> {{this.exam.others}}</li>
+                    <li><strong>Others</strong> {{this.exam.othersExam}}</li>
                   </ul>
                 </div>
               </div>

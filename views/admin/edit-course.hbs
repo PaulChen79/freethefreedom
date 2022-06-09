@@ -7,7 +7,7 @@
           <h2></i>Create Course</h2>
         </div>
         {{>messages}}
-        <form action="/admin/courses" method="POST">
+        <form action="/admin/courses/{{course._id}}?_method=PUT" method="POST">
           {{>admin-course-form}}
         </form>
       </div>
