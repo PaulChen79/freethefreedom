@@ -1,5 +1,6 @@
-{{>header}}
-<main>
+<div id="page">
+	{{>header}}
+	<main>
 		<section id="hero_in" class="courses">
 			<div class="wrapper">
 				<div class="container">
@@ -13,13 +14,15 @@
 				<ul class="clearfix">
 					<li>
 						<div class="switch-field">
-							<input type="radio" id="All" name="All" value="All" {{#ifCond systemQuery ""}}checked{{/ifCond}}>
+							<input type="radio" id="All" name="All" value="All" {{#ifCond systemQuery "" }}checked{{/ifCond}}>
 							<label for="All"><a href="/courses?system=">All</a></label>
-							<input type="radio" id="AIDA" name="AIDA" value="AIDA" {{#ifCond systemQuery "AIDA"}}checked{{/ifCond}}>
+							<input type="radio" id="AIDA" name="AIDA" value="AIDA" {{#ifCond systemQuery "AIDA" }}checked{{/ifCond}}>
 							<label for="AIDA"><a href="/courses?system=AIDA">AIDA</a></label>
-							<input type="radio" id="Molchanov" name="Molchanov" value="Molchanov" {{#ifCond systemQuery "Molchanov"}}checked{{/ifCond}}>
+							<input type="radio" id="Molchanov" name="Molchanov" value="Molchanov" {{#ifCond systemQuery "Molchanov"
+								}}checked{{/ifCond}}>
 							<label for="Molchanov"><a href="/courses?system=Molchanov">Molchanov</a></label>
-							<input type="radio" id="Others" name="Others" value="Others" {{#ifCond systemQuery "Others"}}checked{{/ifCond}}>
+							<input type="radio" id="Others" name="Others" value="Others" {{#ifCond systemQuery "Others"
+								}}checked{{/ifCond}}>
 							<label for="Others"><a href="/courses?system=Others">Training | Others</a></label>
 						</div>
 					</li>
@@ -59,10 +62,7 @@
 				</div>
 				{{/each}}
 				<!-- /box_grid -->
-				</div>
 			</div>
-			<!-- /row -->
-			{{!-- <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p> --}}
 		</div>
 		<!-- /container -->
 		<div class="bg_color_1">
@@ -96,4 +96,5 @@
 		</div>
 		<!-- /bg_color_1 -->
 	</main>
-  {{>footer}}
+	{{>footer}}
+</div>

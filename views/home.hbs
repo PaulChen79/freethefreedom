@@ -1,75 +1,76 @@
-
-{{>header}}
-{{>messages}}
-<main>
-  <section class="header-video">
-    <div id="hero_video">
-      <div>
-        <h3><strong>自由自由</strong><br>專業訓練的自由潛水課程</h3>
-        <p>給你<strong>全方位</strong>、<strong>安全</strong>的訓練課程與證照課程</p>
+<div id="page">
+  {{>header}}
+  {{>messages}}
+  <main>
+    <section class="header-video">
+      <div id="hero_video">
+        <div>
+          <h3><strong>自由自由</strong><br>專業訓練的自由潛水課程</h3>
+          <p>給你<strong>全方位</strong>、<strong>安全</strong>的訓練課程與證照課程</p>
+        </div>
+        <a href="#grid_home" class="btn_explore hidden_tablet"><i class="ti-arrow-down"></i></a>
       </div>
-      <a href="#first_section" class="btn_explore hidden_tablet"><i class="ti-arrow-down"></i></a>
-    </div>
-    <img src="/static/img/video_fix.png" alt="" class="header-video--media" data-video-src="/static/video/ff"
-      data-teaser-source="/static/video/ff" data-provider="" data-video-width="1920" data-video-height="960">
-  </section>
-  <!-- /header-video -->
+      <img src="/static/img/video_fix.png" alt="" class="header-video--media" data-video-src="/static/video/ff"
+        data-teaser-source="/static/video/ff" data-provider="" data-video-width="1920" data-video-height="960">
+    </section>
+    <!-- /header-video -->
 
-  <ul id="grid_home" class="clearfix">
-    <li>
-      <a href="/courses?system=AIDA" class="img_container">
-        <img src="/static/img/DSC07388.jpeg" alt="">
-        <div class="short_info">
-          <h3><strong>AIDA</strong>證照課程</h3>
-          <div><span class="btn_1 rounded">Read more</span></div>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="/courses?system=Molchanov" class="img_container">
-        <img src="/static/img/DYNB.jpg" alt="">
-        <div class="short_info">
-          <h3><strong>WAVE</strong>證照課程</h3>
-          <div><span class="btn_1 rounded">Read more</span></div>
-        </div>
-      </a>
-    </li>
-    <li>
-      <a href="/courses?system=train" class="img_container">
-        <img src="/static/img/IMG_0207.jpg" alt="">
-        <div class="short_info">
-          <h3><strong>訓練與團練課程</strong></h3>
-          <div><span class="btn_1 rounded">Read more</span></div>
-        </div>
-      </a>
-    </li>
-  </ul>
-  <!--/grid_home -->
-
-  <div class="bg_color_1">
-    <div class="container margin_120_95">
-      <div class="main_title_2">
-        <span><em></em></span>
-        <h2>近期開課行事曆</h2>
-        <p>點選標籤查看開課詳細資訊</p>
-      </div>
-      <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
-          <div class="box_general">
-            <div id="calendar"></div>
-            <!-- End calendar -->
+    <ul id="grid_home" class="clearfix">
+      <li>
+        <a href="/courses?system=AIDA" class="img_container">
+          <img src="/static/img/DSC07388.jpeg" alt="">
+          <div class="short_info">
+            <h3><strong>AIDA</strong>證照課程</h3>
+            <div><span class="btn_1 rounded">Read more</span></div>
           </div>
-        </div>
-        <div class="col-md-1"></div>
-      </div>
-    </div>
-    <!-- /container -->
-  </div>
-  <!-- /bg_color_1 -->
+        </a>
+      </li>
+      <li>
+        <a href="/courses?system=Molchanov" class="img_container">
+          <img src="/static/img/DYNB.jpg" alt="">
+          <div class="short_info">
+            <h3><strong>WAVE</strong>證照課程</h3>
+            <div><span class="btn_1 rounded">Read more</span></div>
+          </div>
+        </a>
+      </li>
+      <li>
+        <a href="/courses?system=train" class="img_container">
+          <img src="/static/img/IMG_0207.jpg" alt="">
+          <div class="short_info">
+            <h3><strong>訓練與團練課程</strong></h3>
+            <div><span class="btn_1 rounded">Read more</span></div>
+          </div>
+        </a>
+      </li>
+    </ul>
+    <!--/grid_home -->
 
-  </br>
-  </br>
-  <!--/call_section-->
-</main>
-{{>footer}}
+    <div class="bg_color_1">
+      <div class="container margin_120_95">
+        <div class="main_title_2">
+          <span><em></em></span>
+          <h2>近期開課行事曆</h2>
+          <p>點選標籤查看開課詳細資訊</p>
+        </div>
+        <div class="row">
+          <div class="col-md-1"></div>
+          <div class="col-md-10">
+            <div class="box_general">
+              <div id="calendar"></div>
+              <!-- End calendar -->
+            </div>
+          </div>
+          <div class="col-md-1"></div>
+        </div>
+      </div>
+      <!-- /container -->
+    </div>
+    <!-- /bg_color_1 -->
+
+    </br>
+    </br>
+    <!--/call_section-->
+  </main>
+  {{>footer}}
+</div>
