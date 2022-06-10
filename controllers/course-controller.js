@@ -16,6 +16,16 @@ const courseController = {
     } catch (error) {
       next(error)
     }
+  },
+  getCoursePage: async (req, res, next) => {
+    try {
+      const courseId = req.params.id
+      const course = await Course.findById(courseId).lean()
+      const contents = course.content.split(',')
+      res.render('course', { course, contents })
+    } catch (error) {
+      next(error)
+    }
   }
 }
 
