@@ -1,0 +1,99 @@
+{{>header}}
+<main>
+		<section id="hero_in" class="courses">
+			<div class="wrapper">
+				<div class="container">
+					<h1 class="fadeInUp"><span></span>All courses</h1>
+				</div>
+			</div>
+		</section>
+		<!--/hero_in-->
+		<div class="filters_listing sticky_horizontal">
+			<div class="container">
+				<ul class="clearfix">
+					<li>
+						<div class="switch-field">
+							<input type="radio" id="All" name="All" value="All" {{#ifCond systemQuery ""}}checked{{/ifCond}}>
+							<label for="All"><a href="/courses?system=">All</a></label>
+							<input type="radio" id="AIDA" name="AIDA" value="AIDA" {{#ifCond systemQuery "AIDA"}}checked{{/ifCond}}>
+							<label for="AIDA"><a href="/courses?system=AIDA">AIDA</a></label>
+							<input type="radio" id="Molchanov" name="Molchanov" value="Molchanov" {{#ifCond systemQuery "Molchanov"}}checked{{/ifCond}}>
+							<label for="Molchanov"><a href="/courses?system=Molchanov">Molchanov</a></label>
+							<input type="radio" id="Others" name="Others" value="Others" {{#ifCond systemQuery "Others"}}checked{{/ifCond}}>
+							<label for="Others"><a href="/courses?system=Others">Training | Others</a></label>
+						</div>
+					</li>
+					<li>
+						<div class="layout_view">
+							<a href="#0" class="active"><i class="icon-th"></i></a>
+							<a href="courses-list.html"><i class="icon-th-list"></i></a>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /filters -->
+
+		<div class="container margin_60_35">
+			<div class="row">
+				{{#each courses}}
+				<div class="col-xl-4 col-lg-6 col-md-6">
+					<div class="box_grid wow">
+						<figure class="block-reveal">
+							<div class="block-horizzontal"></div>
+							<a href="/courses/{{this._id}}"><img src="{{this.image}}" class="img-fluid" alt=""></a>
+							<div class="price">${{this.price}}</div>
+						</figure>
+						<div class="wrapper">
+							<small>System</small>
+							<h3>{{this.system}}</h3>
+							<p>{{this.titleZhTW}} - {{this.titleEn}}</p>
+							<p>{{this.priceQuote}}</p>
+						</div>
+						<ul>
+							<li><i class="icon_clock_alt"></i>{{this.contentTime}}</li>
+							<li><a href="/courses/{{this._id}}">Read more</a></li>
+						</ul>
+					</div>
+				</div>
+				{{/each}}
+				<!-- /box_grid -->
+				</div>
+			</div>
+			<!-- /row -->
+			{{!-- <p class="text-center"><a href="#0" class="btn_1 rounded add_top_30">Load more</a></p> --}}
+		</div>
+		<!-- /container -->
+		<div class="bg_color_1">
+			<div class="container margin_60_35">
+				<div class="row">
+					<div class="col-md-4">
+						<a href="/contact" class="boxed_list">
+							<i class="pe-7s-help2"></i>
+							<h4>需要幫助? 聯絡我們</h4>
+							<p>有任何問題，歡迎直接聯繫我們唷</p>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="/guide" class="boxed_list">
+							<i class="pe-7s-wallet"></i>
+							<h4>付費/退款與注意事項</h4>
+							<p>詳細報名與付費及退款方式</p>
+						</a>
+					</div>
+					<div class="col-md-4">
+						<a href="/about" class="boxed_list">
+							<i class="pe-7s-note2"></i>
+							<h4>關於我們</h4>
+							<p>來看看關於自由自由的資訊吧</p>
+						</a>
+					</div>
+				</div>
+				<!-- /row -->
+			</div>
+			<!-- /container -->
+		</div>
+		<!-- /bg_color_1 -->
+	</main>
+  {{>footer}}

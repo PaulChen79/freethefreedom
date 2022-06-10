@@ -1,3 +1,60 @@
 /*============================================================================================*/
 /* Your custom styles below */
 /*============================================================================================*/
+/* .switch-field {
+  overflow: hidden !important;
+}
+.switch-field .toggle a {
+  position: absolute !important;
+  clip: rect(0, 0, 0, 0) !important;
+  height: 1px !important;
+  width: 1px !important;
+  border: 0 !important;
+  overflow: hidden !important;
+}
+.switch-field .toggle a:checked + sapn {
+  background-color: #c72e7a !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  color: #fff !important;
+}
+.switch-field .toggle a sapn {
+  float: left !important;
+  display: inline-block !important;
+  min-width: 70px !important;
+  background-color: #fff !important;
+  color: #31bad5 !important;
+  text-transform: uppercase !important;
+  font-weight: 600 !important;
+  font-size: 12px !important;
+  font-size: 0.75rem !important;
+  text-align: center !important;
+  text-shadow: none !important;
+  padding: 10px 15px 8px 15px !important;
+  line-height: 1 !important;
+  border-left: 1px solid #ededed !important;
+  border-right: 0 !important;
+  -moz-transition: all 0.2s ease-in-out !important;
+  -o-transition: all 0.2s ease-in-out !important;
+  -webkit-transition: all 0.2s ease-in-out !important;
+  -ms-transition: all 0.2s ease-in-out !important;
+  transition: all 0.2s ease-in-out !important;
+}
+@media (max-width: 575px) {
+  .switch-field .toggle a sapn {
+    padding: 10px 12px 8px 12px !important;
+    min-width: inherit !important;
+  }
+}
+.switch-field .toggle a sapn:first-of-type {
+  border-radius: 3px 0 0 3px !important;
+  border-left: 0 !important;
+}
+.switch-field .toggle a sapn:last-of-type {
+  border-radius: 0 3px 3px 0 !important;
+}
+.switch-field .toggle a sapn:hover {
+  cursor: pointer !important;
+  color: #392779 !important;
+} */

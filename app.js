@@ -3,7 +3,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 const express = require('express')
 const exphbs = require('express-handlebars')
-const { handlebarsHelpers } = require('./helpers/handlebars-helpers')
+const handlebarsHelpers = require('./helpers/handlebars-helpers')
 const session = require('express-session')
 const flash = (require('connect-flash'))
 const methodOverride = require('method-override')

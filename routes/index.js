@@ -16,6 +16,8 @@ router.post('/register', userController.register)
 router.post('/login', passport.authenticate('local', { failureRedirect: '/login', failureFlash: true }), userController.login)
 router.get('/logout', userController.logout)
 
+router.get('/courses', courseController.getCoursesGirdPage)
+
 router.use('/auth', auth)
 router.use('/admin', authenticatedAdmin, admin)
 

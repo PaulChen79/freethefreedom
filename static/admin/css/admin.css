@@ -479,7 +479,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #333 !important;
+  color: #333 ;
 }
 
 p {
@@ -575,7 +575,7 @@ a.btn_1:hover,
 /*-------- 1.3 Structure --------*/
 /* Header */
 .bg-default {
-  background: #480048;
+  background: #31bad5;
   background: -webkit-linear-gradient(left, #1017e4, #e7df01);
   background: linear-gradient(to right, #1017e4, #e7df01);
 }
