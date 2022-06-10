@@ -11,46 +11,19 @@
       Free the Freedom
     </span>
   </div>
-  <ul id="top_menu" style="position: relative; top: 12px;">
-    {{#if user}}
+  {{#if user}}
+    <ul
+      id="user_name"
+      style="position: relative; top: 12px; left: 12px; right: 12px;"
+    >
       <li>
         Hi!
         {{user.userName}}
       </li>
-      <li>
-        <a href="/users/{{user._id}}">
-          個人資訊
-        </a>
-      </li>
-      <li>
-        <a href="/schedules">
-          已報名的課程
-        </a>
-      </li>
-      <li>
-        <a href="#0">
-          我的訊息
-        </a>
-      </li>
-      <li>
-        <a href="/logout">
-          登出
-        </a>
-      </li>
-      {{#if user.isAdmin}}
-        <li>
-          <a href="/admin/courses">
-            管理員後台
-          </a>
-        </li>
-      {{/if}}
-    {{else}}
-      <li>
-        <a href="/login">
-          登入
-        </a>
-      </li>
-    {{/if}}
+    </ul>
+  {{/if}}
+  <ul id="top_menu" style="position: relative; top: 12px;">
+    {{#if user}}{{/if}}
     <li>
       <a href="#0" class="search-overlay-menu-btn">
         Search
@@ -131,6 +104,53 @@
           </li>
         </ul>
       </li>
+      {{#if user}}
+        <li>
+          <span>
+            <a href="/users/{{user._id}}">
+              個人資訊
+            </a>
+          </span>
+        </li>
+        <li>
+          <span>
+            <a href="/schedules">
+              已報名的課程
+            </a>
+          </span>
+        </li>
+        <li>
+          <span>
+            <a href="#0">
+              我的訊息
+            </a>
+          </span>
+        </li>
+        <li>
+          <span>
+            <a href="/logout">
+              登出
+            </a>
+          </span>
+        </li>
+        {{#if user.isAdmin}}
+          <li>
+            <span>
+              <a href="/admin/courses">
+                管理員後台
+              </a>
+            </span>
+          </li>
+        {{/if}}
+      {{else}}
+        <li>
+          <span>
+            <a href="/login">
+              登入
+            </a>
+          </span>
+        </li>
+      {{/if}}
     </ul>
   </nav>
   <!-- Search Menu -->

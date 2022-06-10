@@ -679,6 +679,27 @@ header.header.sticky_menu_active {
   }
 }
 
+ul#user_name {
+  float: right;
+  margin: 0 0 0 0;
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
+ul#user_name li {
+  display: inline-block;
+  color: white;
+  margin: 2px 0 0 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: 1;
+  margin-right: 20px;
+}
+@media (max-width: 991px) {
+  ul#user_name li {
+    margin: 5px 0 0 10px;
+  }
+}
 ul#top_menu {
   float: right;
   margin: 0 0 0 0;
@@ -693,6 +714,11 @@ ul#top_menu li {
   letter-spacing: 2px;
   line-height: 1;
   margin-right: 20px;
+}
+@media (max-width: 991px) {
+  ul#top_menu li {
+    margin: 5px 0 0 10px;
+  }
 }
 ul#top_menu li:last-child {
   margin-right: 0;
