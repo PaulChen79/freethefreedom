@@ -11,17 +11,6 @@
       Free the Freedom
     </span>
   </div>
-  {{#if user}}
-    <ul
-      id="user_name"
-      style="position: relative; top: 12px; left: 12px; right: 12px;"
-    >
-      <li>
-        Hi!
-        {{user.userName}}
-      </li>
-    </ul>
-  {{/if}}
   <ul id="top_menu" style="position: relative; top: 12px;">
     {{#if user}}{{/if}}
     <li>
@@ -64,15 +53,6 @@
               開課資訊
             </a>
           </li>
-        </ul>
-      </li>
-      <li>
-        <span>
-          <a href="#0">
-            關於我們
-          </a>
-        </span>
-        <ul>
           <li>
             <a href="/about">
               關於自由自由
@@ -90,41 +70,31 @@
           </li>
         </ul>
       </li>
-      <li>
-        <span>
-          <a href="#0">
-            聯絡我們
-          </a>
-        </span>
-        <ul>
-          <li>
-            <a href="/contact">
-              聯絡自由自由
-            </a>
-          </li>
-        </ul>
-      </li>
       {{#if user}}
         <li>
           <span>
-            <a href="/users/{{user._id}}">
-              個人資訊
-            </a>
-          </span>
-        </li>
-        <li>
-          <span>
-            <a href="/schedules">
-              已報名的課程
-            </a>
-          </span>
-        </li>
-        <li>
-          <span>
             <a href="#0">
-              我的訊息
+              Hi!
+              {{user.userName}}
             </a>
           </span>
+          <ul>
+            <li>
+              <a href="/users/{{user._id}}">
+                我的資訊
+              </a>
+            </li>
+            <li>
+              <a href="/schedules">
+                已報名的課程
+              </a>
+            </li>
+            <li>
+              <a href="#0">
+                我的訊息
+              </a>
+            </li>
+          </ul>
         </li>
         <li>
           <span>
