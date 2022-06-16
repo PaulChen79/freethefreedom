@@ -1,0 +1,80 @@
+<div class="fixed-nav sticky-footer" id="page-top">
+  {{>admin-nav}}
+  <div class="content-wrapper" style="margin-top: 60px;">
+    <div class="container-fluid">
+      <div class="box_general">
+        <div class="header_box">
+          <div class="d-flex justify-content-between">
+            <h2 class="d-inline-block">All Schedules</h2>
+            <a class="btn btn-primary" href="/admin/schedules/create">Add New Schedules</a>
+          </div>
+        </div>
+        {{>messages}}
+        <div class="list_general">
+          <ul>
+            {{#each schedules}}
+            <li>
+              <div class="row">
+                <div class="col-5">
+                  <h4>{{this.name}}</h4>
+                  <h6><strong>Date: </strong>{{this.startDate}} - {{this.endDate}}</h6>
+                  <h6><strong>Max People: </strong>{{this.maxPeople}}</h6>
+                  <p>{{this.desc}}</p>
+                  <h6>Qualification</h6>
+                  <a href="/admin/schedules/{{this._id}}/edit" class="btn_1 gray approve">Edit</a>
+                </div>
+                <div class="col-7">
+
+                </div>
+              </div>
+              <ul class="buttons">
+                <li><a href="/admin/schedules/{{this._id}}/edit" class="btn_1 gray approve">Edit</a></li>
+                <li>
+                  <form action="/admin/schedules/{{this._id}}?_method=PATCH" method="POST">
+                    {{#if this.isAvailable}}
+                    <button type="submit" class="btn_1 gray approve">Available</button>
+                    {{else}}
+                    <button type="submit" class="btn_1 gray delete">Unavailable</button>
+                    {{/if}}
+                  </form>
+                </li>
+                <li>
+                  <form action="/admin/schedules/{{this._id}}?_method=DELETE" method="POST">
+                    <button type="submit" class="btn_1 gray delete"
+                      onclick="return confirm(`確定要刪除 {{ this.name }} 嗎？`)">Delete</button>
+                  </form>
+                </li>
+              </ul>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- /container-fluid-->
+  </div>
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
+    <i class="fa fa-angle-up"></i>
+  </a>
+  <!-- Logout Modal-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+          <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">×</span>
+          </button>
+        </div>
+        <div class="modal-div">Select "Logout" below if you are ready to end your current session.</div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+          <a class="btn btn-primary" href="/logout">Logout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -5,9 +5,12 @@ const scheduleSchema = new Schema({
     type: String,
     required: true
   },
-  Date: {
+  startDate: {
     type: Date,
     required: true
+  },
+  endDate: {
+    type: Date
   },
   maxPeople: {
     type: Number,
@@ -17,11 +20,9 @@ const scheduleSchema = new Schema({
     type: String,
     required: true
   },
-  courses: [{
-    id: {
-      type: String
-    }
-  }],
+  courseId: {
+    type: String
+  },
   isAvailable: {
     type: Boolean,
     default: true

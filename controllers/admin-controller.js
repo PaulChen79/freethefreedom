@@ -1,4 +1,5 @@
 const Course = require('../models/course')
+const Schedule = require('../models/schedule')
 
 const adminController = {
   getCoursesPage: async (req, res, next) => {
@@ -149,6 +150,37 @@ const adminController = {
       await Course.findByIdAndRemove(courseId)
       req.flash('success_msg', '成功刪除課程')
       res.redirect('/admin/courses')
+    } catch (error) {
+      next(error)
+    }
+  },
+  getSchedulesPage: async (req, res, next) => {
+    try {
+      const schedules = await Schedule.find().lean()
+      res.render('admin/schedules', { schedules })
+    } catch (error) {
+      next(error)
+    }
+  },
+  getCreateSchedulePage: async (req, res, next) => {
+    try {
+      const courses = await Course.find().lean()
+      res.render('admin/create-schedule', { courses })
+    } catch (error) {
+      next(error)
+    }
+  },
+  createSchedule: async (req, res, next) => {
+    try {
+      console.log(req.body)
+      const { name, startDate, endDate, maxPeople, desc, courseId } = req.body
+      if (!name || !startDate || !endDate || !maxPeople || !desc || !courseId) {
+        req.flash('warning_msg', 'All fields need to fill.')
+        return res.redirect('back')
+      }
+      await Schedule.create({ name, startDate, endDate, maxPeople, desc, courseId })
+      req.flash('success_msg', 'Schedule is created')
+      res.redirect('/admin/schedules')
     } catch (error) {
       next(error)
     }

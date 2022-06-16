@@ -9,6 +9,7 @@ const flash = (require('connect-flash'))
 const methodOverride = require('method-override')
 const { getUser } = require('./helpers/auth-helpers')
 const usePassport = require('./config/passport')
+const compression = require('compression')
 const path = require('path')
 const routes = require('./routes/index')
 const app = express()
@@ -22,6 +23,14 @@ app.use(session({ secret: process.env.SESSION_SECRET, resave: false, saveUniniti
 usePassport(app)
 app.use(flash())
 app.use(methodOverride('_method'))
+app.use(compression({
+  filter: (req, res) => {
+    if (req.headers['x-no-compression']) {
+      return false
+    }
+    return compression.filter(req, res)
+  }
+}))
 app.use('/static', express.static(path.join(__dirname, 'static')))
 app.use((req, res, next) => {
   res.locals.success_messages = req.flash('success_messages')
