@@ -15,16 +15,14 @@
             {{#each schedules}}
             <li>
               <div class="row">
-                <div class="col-5">
+                <div class="col">
                   <h4>{{this.name}}</h4>
                   <h6><strong>Date: </strong>{{this.startDate}} - {{this.endDate}}</h6>
                   <h6><strong>Max People: </strong>{{this.maxPeople}}</h6>
                   <p>{{this.desc}}</p>
-                  <h6>Qualification</h6>
-                  <a href="/admin/schedules/{{this._id}}/edit" class="btn_1 gray approve">Edit</a>
-                </div>
-                <div class="col-7">
-
+                  {{#each this.student}}
+                    <p><a href="/admin/users/{{this._id}}" class="text-decoration-none">{{this.name}}</a></p>
+                  {{/each}}
                 </div>
               </div>
               <ul class="buttons">

@@ -157,6 +157,10 @@ const adminController = {
   getSchedulesPage: async (req, res, next) => {
     try {
       const schedules = await Schedule.find().lean()
+      schedules.forEach(schedule => {
+        schedule.startDate = schedule.startDate.toString().slice(0, 15)
+        schedule.endDate = schedule.endDate.toString().slice(0, 15)
+      })
       res.render('admin/schedules', { schedules })
     } catch (error) {
       next(error)
@@ -172,7 +176,6 @@ const adminController = {
   },
   createSchedule: async (req, res, next) => {
     try {
-      console.log(req.body)
       const { name, startDate, endDate, maxPeople, desc, courseId } = req.body
       if (!name || !startDate || !endDate || !maxPeople || !desc || !courseId) {
         req.flash('warning_msg', 'All fields need to fill.')
@@ -180,6 +183,31 @@ const adminController = {
       }
       await Schedule.create({ name, startDate, endDate, maxPeople, desc, courseId })
       req.flash('success_msg', 'Schedule is created')
+      res.redirect('/admin/schedules')
+    } catch (error) {
+      next(error)
+    }
+  },
+  getEditSchedulePage: async (req, res, next) => {
+    try {
+      const scheduleId = req.params.id
+      const schedule = await Schedule.findById(scheduleId).lean()
+      const courses = await Course.find().lean()
+      res.render('admin/edit-schedule', { schedule, courses })
+    } catch (error) {
+      next(error)
+    }
+  },
+  editSchedule: async (req, res, next) => {
+    try {
+      const scheduleId = req.params.id
+      const { name, startDate, endDate, maxPeople, desc, courseId } = req.body
+      if (!name || !startDate || !endDate || !maxPeople || !desc || !courseId) {
+        req.flash('warning_msg', 'All fields need to fill.')
+        return res.redirect('back')
+      }
+      await Schedule.findOneAndUpdate({ _id: scheduleId }, { name, startDate, endDate, maxPeople, desc, courseId })
+      req.flash('success_msg', 'Schedule is updated')
       res.redirect('/admin/schedules')
     } catch (error) {
       next(error)

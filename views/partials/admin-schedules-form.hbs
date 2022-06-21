@@ -33,7 +33,9 @@
             <label>Select Course</label>
             <select class="form-control" aria-label="" name="courseId">
               {{#each courses}}
-              <option value="{{this._id}}">{{this.titleEn}}</option>
+                <option value="{{this._id}}" {{#ifCond this._id ../schedule.courseId}} selected {{/ifCond}}>
+                  {{this.titleEn}}
+                </option>
               {{/each}}
             </select>
           </div>

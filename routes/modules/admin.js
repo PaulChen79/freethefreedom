@@ -8,8 +8,11 @@ router.put('/courses/:id', adminController.editCourse)
 router.delete('/courses/:id', adminController.deleteCourse)
 router.post('/courses', adminController.createCourse)
 router.get('/courses', adminController.getCoursesPage)
-router.get('/schedules', adminController.getSchedulesPage)
+
 router.get('/schedules/create', adminController.getCreateSchedulePage)
+router.get('/schedules/:id/edit', adminController.getEditSchedulePage)
+router.put('/schedules/:id', adminController.editSchedule)
 router.post('/schedules', adminController.createSchedule)
+router.get('/schedules', adminController.getSchedulesPage)
 
 module.exports = router

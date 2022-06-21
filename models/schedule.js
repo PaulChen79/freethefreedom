@@ -1,5 +1,17 @@
 const mongoose = require('mongoose')
 const Schema = mongoose.Schema
+
+const studentSchema = new Schema({
+  name: {
+    type: String,
+    required: true
+  },
+  userId: {
+    type: String,
+    required: true
+  }
+})
+
 const scheduleSchema = new Schema({
   name: {
     type: String,
@@ -21,12 +33,16 @@ const scheduleSchema = new Schema({
     required: true
   },
   courseId: {
-    type: String
+    type: Schema.Types.ObjectId,
+    ref: 'Course',
+    index: true,
+    required: true
   },
   isAvailable: {
     type: Boolean,
     default: true
   },
+  student: studentSchema,
   createdAt: {
     type: Date,
     default: Date.now
