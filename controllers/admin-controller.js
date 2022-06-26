@@ -212,6 +212,26 @@ const adminController = {
     } catch (error) {
       next(error)
     }
+  },
+  deleteSchedule: async (req, res, next) => {
+    try {
+      const scheduleId = req.params.id
+      await Schedule.findByIdAndRemove(scheduleId)
+      req.flash('success_msg', 'Schedule is deleted')
+      res.redirect('/admin/schedules')
+    } catch (error) {
+      next(error)
+    }
+  },
+  setAvailableSchedule: async (req, res, next) => {
+    try {
+      const scheduleId = req.params.id
+      const schedule = await Schedule.findById(scheduleId)
+      await schedule.update({ isAvailable: !schedule.isAvailable })
+      res.redirect('/admin/schedules')
+    } catch (error) {
+      next(error)
+    }
   }
 }
 

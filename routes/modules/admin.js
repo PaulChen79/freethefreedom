@@ -12,6 +12,8 @@ router.get('/courses', adminController.getCoursesPage)
 router.get('/schedules/create', adminController.getCreateSchedulePage)
 router.get('/schedules/:id/edit', adminController.getEditSchedulePage)
 router.put('/schedules/:id', adminController.editSchedule)
+router.patch('/schedules/:id', adminController.setAvailableSchedule)
+router.delete('/schedules/:id', adminController.deleteSchedule)
 router.post('/schedules', adminController.createSchedule)
 router.get('/schedules', adminController.getSchedulesPage)
 
